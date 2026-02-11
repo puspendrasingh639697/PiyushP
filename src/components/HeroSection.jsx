@@ -1,15 +1,12 @@
-import first1 from "../assets/first1.jpg"; 
-import { motion, useScroll, useTransform } from "framer-motion";
-import {
-  ArrowRight,
-  Play,
-  Users,
-  Globe,
-  Award,
-  Shield,
-  TrendingUp,
-} from "lucide-react";
-import { useRef } from "react";
+import first1 from "../assets/Green1.jpg";
+import greenImg from "../assets/Green.jpg";
+import thirdImg from "../assets/Green2.jpg";
+import four from "../assets/Green3.jpg";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { ArrowRight, Play, Shield, TrendingUp } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+
+const images = [first1, greenImg, thirdImg,four];
 
 export default function HeroSection() {
   const heroRef = useRef(null);
@@ -18,180 +15,160 @@ export default function HeroSection() {
     offset: ["start start", "end start"],
   });
 
-  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const [current, setCurrent] = useState(0);
+
+  // Auto slider logic
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4500); // Thoda slow rakha hai background ke liye
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
       id="Home"
       ref={heroRef}
-      className="relative flex items-center justify-center min-h-screen overflow-hidden w-full"
+      className="relative flex items-center justify-center min-h-screen overflow-hidden w-full bg-black"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-emerald-50">
-        <div className="absolute inset-0 opacity-30">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <defs>
-              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path
-                  d="M 10 0 L 0 0 0 10"
-                  fill="none"
-                  stroke="#10b981"
-                  strokeWidth="0.5"
-                  opacity="0.3"
-                />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
-        </div>
+      {/* Background Image Slider */}
+      <div className="absolute inset-0 z-0">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 0.6, scale: 1 }} // Opacity 0.6 taaki text readable rahe
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5 }}
+            className="absolute inset-0"
+          >
+            <img
+              src={images[current]}
+              alt="Background"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </AnimatePresence>
+        
+        {/* Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-1" />
       </div>
 
-      {/* Main Content */}
+      
+
+      {/* Main Content Layer */}
       <motion.div
-        className="w-full px-5 sm:px-6 lg:px-8 relative"
-        style={{ y: heroY, opacity: heroOpacity }}
+        className="container mx-auto px-5 sm:px-6 lg:px-8 relative z-10"
+        style={{ y: heroY }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
-          {/* Left Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          
+          {/* Left: Text Content */}
           <motion.div
-            className="space-y-8 max-w-2xl mx-auto lg:mx-0"
-            initial={{ opacity: 0, x: -60 }}
+            className="space-y-8 max-w-2xl text-white"
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
             <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                <span className="inline-block bg-green-100 text-green-800 border border-green-200 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">
-                  🌱 Connecting Farms & Businesses
-                </span>
-              </motion.div>
+             <span className="inline-block bg-green-600/20 backdrop-blur-md text-green-400 border border-green-500/30 px-4 py-2 text-sm font-semibold mt-8">
+  Connecting Farms & Businesses
+</span>
 
-              <motion.h1
-                className="mt-10 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
-                Fresh Produce,
-                <br />
-                <span className="text-green-600">Direct Connection</span>
-              </motion.h1>
 
-              <motion.p
-                className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                Bridge the gap between farms and businesses with our innovative platform. Get fresh,
-                quality produce directly from verified farmers.
-              </motion.p>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+                Fresh Produce, <br />
+                <span className="text-green-500">Direct Connection</span>
+              </h1>
+
+              <p className="text-lg lg:text-xl text-gray-200 leading-relaxed max-w-lg">
+                Bridge the gap between farms and businesses with our innovative platform. 
+                Get quality produce directly from verified farmers.
+              </p>
             </div>
 
-            {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              <button className="bg-green-600 hover:bg-green-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold flex items-center justify-center group">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold flex items-center justify-center group transition-all">
                 Start Partnership
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <button className="border-2 border-green-300 text-green-700 hover:bg-green-50 rounded-lg px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-transparent flex items-center justify-center">
-                <Play className="mr-2 w-5 h-5" />
+              <button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-bold flex items-center justify-center transition-all">
+                <Play className="mr-2 w-5 h-5 fill-current" />
                 Watch Demo
               </button>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              {[ 
-                { number: "500+", label: "Farmers", icon: <Users className="w-5 h-5" /> },
-                { number: "200+", label: "Businesses", icon: <Globe className="w-5 h-5" /> },
-                { number: "99%", label: "Satisfaction", icon: <Award className="w-5 h-5" /> },
-              ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center mb-1 text-green-600">
-                    {stat.icon}
-                  </div>
-                  <div className="text-lg sm:text-2xl font-bold text-gray-900">{stat.number}</div>
-                  <div className="text-xs sm:text-sm text-gray-600 font-medium">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Right Image */}
-          <motion.div
-            className="relative w-full"
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
-              <motion.div
-                className="relative"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img
-                  src={first1}
-                  alt="Fresh farm produce and beautiful farmland"
-                  className="w-full h-auto object-cover rounded-xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 via-transparent to-transparent" />
-              </motion.div>
-
-              {/* Floating Card Top */}
-              <motion.div
-                className="absolute top-4 left-4 bg-white rounded-xl shadow-lg p-3 sm:p-4 border border-gray-100 z-10 hidden sm:block"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                    <Shield className="w-4 sm:w-5 h-4 sm:h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900 text-xs sm:text-sm">Quality Assured</div>
-                    <div className="text-[10px] sm:text-xs text-gray-600">100% Verified</div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Floating Card Bottom */}
-              <motion.div
-                className="absolute bottom-4 right-4 bg-white rounded-xl shadow-lg p-3 sm:p-4 border border-gray-100 z-10 hidden sm:block"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-              >
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="w-4 sm:w-5 h-4 sm:h-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900 text-xs sm:text-sm">30% Savings</div>
-                    <div className="text-[10px] sm:text-xs text-gray-600">Direct Trade</div>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
+
+          {/* Right: Floating Stats Cards */}
+         {/* Right: Single Image with Overlay Cards */}
+<motion.div 
+  className="relative h-[400px] w-full hidden lg:flex items-center justify-center"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.5 }}
+>
+  {/* Main Right Image */}
+  <img 
+    src={first1} 
+    alt="Farm" 
+    className="rounded-3xl object-cover h-full w-full shadow-2xl"
+  />
+
+  {/* Overlay Cards */}
+  <div className="absolute inset-0 flex flex-col justify-between p-6">
+    {/* Card 1 */}
+    <motion.div
+      className="bg-green-400 backdrop-blur-xl rounded-2xl p-4 border border-white/20 shadow-2xl w-64"
+      animate={{ y: [0, -10, 0] }}
+      transition={{ duration: 5, repeat: Infinity }}
+    >
+      <div className="flex items-center space-x-3">
+        <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/50">
+          <Shield className="text-white" />
+        </div>
+        <div>
+          <div className="font-bold  text-md">Quality Assured</div>
+          <div className="text-sm">100% Verified Source</div>
+        </div>
+      </div>
+    </motion.div>
+
+    {/* Card 2 */}
+    <motion.div
+      className="bg-green-600 backdrop-blur-xl rounded-2xl p-4 border border-white/20 shadow-2xl w-64 self-end"
+      animate={{ y: [0, 10, 0] }}
+      transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+    >
+      <div className="flex items-center space-x-3">
+        <div className="w-10 h-10 bg-green-800 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/50">
+          <TrendingUp className="text-white" />
+        </div>
+        <div>
+          <div className="font-bold  text-md">30% Savings</div>
+          <div className="text-sm">Direct Trade Price</div>
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</motion.div>
+
         </div>
       </motion.div>
+
+      {/* Slider Indicators (Bottom) */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              current === i ? "w-10 bg-green-500" : "w-4 bg-white/30"
+            }`}
+          />
+        ))}
+      </div>
     </section>
   );
 }

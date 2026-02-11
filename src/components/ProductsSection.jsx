@@ -34,7 +34,7 @@ export default function ProductsSection() {
         "Packaging: 250g | 500g | 1kg",
         "Best for: Retailers, Ayurvedic stores"
       ],
-      color: "purple",
+      color: "green",
       image: "/images/premium-makhana.jpg",
     },
     {
@@ -46,7 +46,7 @@ export default function ProductsSection() {
         "Bulk supply available",
         "Best for: B2B buyers, wholesalers"
       ],
-      color: "blue",
+      color: "green",
       image: "/images/standard-makhana.jpg",
     },
     {
@@ -58,7 +58,7 @@ export default function ProductsSection() {
         "Ready to eat, healthy snack",
         "Best for: Modern retail & startups"
       ],
-      color: "orange",
+      color: "green",
       image: "/images/roasted-makhana.jpg",
     },
     {
@@ -90,7 +90,7 @@ export default function ProductsSection() {
             Our Products
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">Handpicked. Hygienic. Honest.</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl  max-w-3xl mx-auto leading-relaxed">
             NayaVayapar offers carefully sorted, quality-tested Makhana — straight from Bihar's ponds to your shelves
           </p>
         </motion.div>
@@ -120,7 +120,7 @@ export default function ProductsSection() {
                 />
                 <div className="absolute top-4 left-4">
                   <div
-                    className={`w-12 h-12 rounded-lg flex items-center justify-center text-${product.color}-600 bg-${product.color}-100`}
+                    className={`w-12 h-12 rounded-lg flex items-center justify-center text-${product.color}-600`}
                   >
                     {product.icon}
                   </div>
@@ -129,12 +129,12 @@ export default function ProductsSection() {
 
               {/* Title & Items */}
               <div className="p-5">
-                <h3 className="text-xl text-gray-900 font-semibold mb-2">{product.category}</h3>
-                <p className="text-gray-600 mb-4">{product.description}</p>
+                <h3 className="text-xl font-semibold mb-2">{product.category}</h3>
+                <p className="mb-4">{product.description}</p>
                 <ul className="space-y-2">
                   {product.details.map((detail, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <li key={itemIndex} className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-800 mr-2 flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{detail}</span>
                     </li>
                   ))}

@@ -1,4 +1,5 @@
 import { Users, MapPin, Package, Building, Globe, PlayCircle, Quote, Upload } from "lucide-react";
+import { Shield, TrendingUp, Play, Lightbulb } from "lucide-react";
 
 export default function ImpactGalleryPage() {
   const impactMetrics = [
@@ -77,29 +78,52 @@ export default function ImpactGalleryPage() {
       </section>
 
       {/* Impact in Numbers */}
-      <section className="w-full py-16 md:py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800 dark:text-gray-100">
-            Impact in Numbers (2024–25)
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {impactMetrics.map((metric, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center p-8 text-center bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
-              >
-                <div className="p-4 rounded-full bg-green-100 dark:bg-green-900/20 mb-6">
-                  <metric.icon className="h-12 w-12 text-green-600 dark:text-green-400" />
-                </div>
-                <h3 className="text-5xl font-extrabold mb-3 text-gray-900 dark:text-gray-50">
-                  {metric.count}
-                </h3>
-                <p className="text-xl font-medium text-gray-600 dark:text-gray-300">{metric.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section className="w-full py-16 bg-white">
+  <div className="container mx-auto px-4 max-w-7xl text-center">
+    <h2 className="text-4xl md:text-5xl font-bold mb-12">
+      Why Choose NayaVyapar?
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      {/* Item 1 */}
+      <div className="flex flex-col items-center">
+        <Shield className="h-12 w-12 mb-4 text-green-600" />
+        <h3 className="font-semibold text-lg mb-2">Technology-Driven Tracking & Visibility</h3>
+        <p className="text-sm">
+          Real-time tracking, instant updates, and smart dashboard for smooth operations.
+        </p>
+      </div>
+
+      {/* Item 2 */}
+      <div className="flex flex-col items-center">
+        <TrendingUp className="h-12 w-12 mb-4 text-green-600" />
+        <h3 className="font-semibold text-lg mb-2">Reliable & Trustworthy Services</h3>
+        <p className="text-sm">
+          Verified partners ensure safe handling and on-time delivery.
+        </p>
+      </div>
+
+      {/* Item 3 */}
+      <div className="flex flex-col items-center">
+        <Play className="h-12 w-12 mb-4 text-green-600" />
+        <h3 className="font-semibold text-lg mb-2">Easy & Hassle-Free Logistics Management</h3>
+        <p className="text-sm">
+          Simple tools to plan, book, and manage shipments in a few clicks.
+        </p>
+      </div>
+
+      {/* Item 4 */}
+      <div className="flex flex-col items-center">
+        <Lightbulb className="h-12 w-12 mb-4 text-green-600" />
+        <h3 className="font-semibold text-lg mb-2">Scalable for Every Need</h3>
+        <p className="text-sm">
+          Flexible solutions that grow with your business.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Faces of the Revolution (Photo Gallery) */}
       <section className="w-full py-16 md:py-20 bg-gray-50 dark:bg-gray-950">
@@ -107,8 +131,8 @@ export default function ImpactGalleryPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800 dark:text-gray-100">
             Faces of the Revolution
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 text-center mb-12">{"“Behind every seed, there is a story.”"}</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <p className="text-xl  text-center mb-12">{"“Behind every seed, there is a story.”"}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
               <div
                 key={index}
@@ -219,7 +243,7 @@ export default function ImpactGalleryPage() {
                 key={index}
                 className="p-8 flex flex-col justify-between bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700"
               >
-                <div className="mb-6 text-xl italic text-gray-700 dark:text-gray-300 relative">
+                <div className="mb-6 text-xl italic  dark:text-gray-300 relative">
                   <Quote className="absolute -top-4 -left-4 h-10 w-10 text-green-300 dark:text-green-700/30" />
                   <span className="relative z-10">
                     {"“"}

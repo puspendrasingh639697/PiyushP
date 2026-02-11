@@ -23,8 +23,8 @@ export default function OurProducts() {
       packaging: ["250g", "500g", "1kg"],
       bestFor: "Retailers, Ayurvedic stores",
       icon: "💎",
-      gradient: "from-amber-400 to-orange-500",
-      bgGradient: "from-amber-50 to-orange-50",
+      gradient: "from-green-400 to-green-500",
+      bgGradient: "from-green-400 to-green-100",
       features: ["Extra large size", "Premium quality", "Perfect for gifting"],
       popular: true,
     },
@@ -36,8 +36,8 @@ export default function OurProducts() {
       packaging: ["Bulk supply available"],
       bestFor: "B2B buyers, wholesalers",
       icon: "📏",
-      gradient: "from-green-400 to-emerald-500",
-      bgGradient: "from-green-50 to-emerald-50",
+      gradient: "from-green-400 to-green-500",
+      bgGradient: "from-green-400 to-green-100",
       features: ["Medium-size grains", "Cost-effective", "Bulk quantities"],
       popular: false,
     },
@@ -49,8 +49,8 @@ export default function OurProducts() {
       packaging: ["Ready to eat"],
       bestFor: "Modern retail & startups",
       icon: "🌶️",
-      gradient: "from-red-400 to-pink-500",
-      bgGradient: "from-red-50 to-pink-50",
+      gradient: "from-green-400 to-green-500",
+      bgGradient: "from-green-400 to-green-100",
       features: ["Ready to eat", "Healthy snack", "Flavored with spices"],
       popular: false,
     },
@@ -62,15 +62,16 @@ export default function OurProducts() {
       packaging: ["Festive packs available"],
       bestFor: "Festive packs, gifting, online sales",
       icon: "🥜",
-      gradient: "from-purple-400 to-indigo-500",
-      bgGradient: "from-purple-50 to-indigo-50",
+      gradient: "from-green-400 to-green-500",
+      bgGradient: "from-green-400 to-green-100",
+    
       features: ["Premium dry fruits", "Festive packaging", "Gift-ready"],
       popular: false,
     },
   ];
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 mt-16 relative">
+    <div className="min-h-screen w-full overflow-x-hidden  mt-16 relative">
       {/* Decorative Blurs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -left-20 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-orange-200/30 to-amber-200/30 rounded-full blur-3xl" />
@@ -81,29 +82,25 @@ export default function OurProducts() {
       <div className="relative w-full px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-md mb-8">
-            <Leaf className="w-5 h-5 text-green-600" />
-            <span className="text-sm font-medium text-gray-700">
-              From Bihar's Ponds to Your Shelves
-            </span>
-            <Sparkles className="w-5 h-5 text-amber-500" />
-          </div>
+         
 
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600 bg-clip-text text-transparent mb-6">
-            Our Products
-          </h1>
+<h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+  <span className="text-black">Our </span>
+  <span className="text-green-600">Products</span>
+</h1>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
+
+          <h2 className="text-2xl sm:text-3xl font-bold  mb-4">
             Makhana Varieties We Offer
           </h2>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 text-lg sm:text-2xl font-semibold text-orange-600 mb-6">
-            <Heart className="w-6 h-6 text-red-500" />
+          <div className="flex flex-wrap items-center justify-center gap-3 text-lg sm:text-2xl font-semibold  mb-6">
+            
             <span>Handpicked. Hygienic. Honest.</span>
-            <Award className="w-6 h-6 text-amber-500" />
+            
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl  max-w-3xl mx-auto font-medium leading-relaxed">
             NayaVayapar offers carefully sorted, quality-tested Makhana — straight from Bihar's pristine ponds to your premium shelves.
           </p>
         </div>
@@ -117,7 +114,7 @@ export default function OurProducts() {
             >
               {product.popular && (
                 <div className="absolute top-4 right-4">
-                  <span className="inline-flex items-center bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full shadow-md">
+                  <span className="inline-flex items-center bg-gradient-to-r from-green-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full shadow-md">
                     <Star className="w-3 h-3 mr-1" />
                     Most Popular
                   </span>
@@ -125,12 +122,10 @@ export default function OurProducts() {
               )}
 
               <div className="flex items-start gap-4 mb-4">
-                <div className={`text-4xl p-3 rounded-xl bg-gradient-to-br ${product.gradient} shadow`}>
-                  {product.icon}
-                </div>
+                
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{product.name}</h3>
-                  <p className="text-gray-600 text-sm sm:text-base">{product.description}</p>
+                  <h3 className="text-xl sm:text-2xl">{product.name}</h3>
+                  <p className="text-sm sm:text-base">{product.description}</p>
                 </div>
               </div>
 
@@ -141,7 +136,7 @@ export default function OurProducts() {
                     ₹
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600">Average Price</div>
+                    <div className="text-sm">Average Price</div>
                     <div className="text-lg sm:text-xl font-bold text-green-600">{product.price}</div>
                   </div>
                 </div>
@@ -204,22 +199,22 @@ export default function OurProducts() {
 
         {/* CTA */}
         <div className="mt-20 text-center space-y-6 max-w-3xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
+  Ready to Transform Your Business?
+</h3>
+          <p className="text-sm sm:text-base md:text-lg  leading-relaxed">
             Join hundreds of retailers & wholesalers who trust NayaVayapar for premium Makhana supply.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-            <button className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold hover:scale-105 transition">
+            <button className="px-6 py-3 bg-gradient-to-r from-green-700 to-emerald-600 text-white rounded-lg font-semibold hover:scale-105 transition">
               <Star className="w-5 h-5 mr-2 inline" />
               Get Instant Price Sheet
             </button>
-            <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-600 text-white rounded-lg font-semibold hover:scale-105 transition">
+            <button className="px-6 py-3 bg-gradient-to-r from-green-700 to-emerald-600 text-white rounded-lg font-semibold hover:scale-105 transition">
               <Truck className="w-5 h-5 mr-2 inline" />
               Place Bulk Order Now
             </button>
-            <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg font-semibold hover:scale-105 transition">
+            <button className="px-6 py-3 bg-gradient-to-r from-green-700 to-emerald-600 to-indigo-600 text-white rounded-lg font-semibold hover:scale-105 transition">
               <Gift className="w-5 h-5 mr-2 inline" />
               Custom Packaging
             </button>
@@ -229,3 +224,5 @@ export default function OurProducts() {
     </div>
   );
 }
+
+

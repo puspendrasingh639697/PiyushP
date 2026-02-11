@@ -51,7 +51,7 @@ export default function Header() {
               >
                 <Link
                   to={item.path}
-                  className="relative text-gray-700 hover:text-green-600 transition-colors font-medium group"
+                  className="relative  hover:text-green-600 transition-colors font-medium group"
                 >
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300" />
@@ -68,9 +68,9 @@ export default function Header() {
               transition={{ duration: 0.6 }}
               className="hidden md:block"
             >
-              <button className="bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg px-6 py-2 text-sm font-semibold flex items-center">
+              <button className="bg-green-700 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300  px-6 py-3 text-sm font-semibold flex items-center">
                 Get Started
-                <ArrowRight className="ml-2 w-4 h-4" />
+                {/* <ArrowRight className="ml-2 w-4 h-4" /> */}
               </button>
             </motion.div>
 
@@ -103,7 +103,7 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <button className="w-full bg-green-600 text-white rounded-lg py-3 text-sm font-semibold">
+            <button className="w-full bg-green-700 text-white rounded-lg py-3 text-sm font-semibold">
               Get Started
             </button>
           </div>

@@ -14,14 +14,14 @@ const colorMap = {
     border: "bg-green-500",
   },
   blue: {
-    bg: "bg-blue-100",
-    text: "text-blue-600",
-    border: "bg-blue-500",
+    bg: "bg-green-100",
+    text: "text-green-600",
+    border: "bg-green-500",
   },
   purple: {
-    bg: "bg-purple-100",
-    text: "text-purple-600",
-    border: "bg-purple-500",
+     bg: "bg-green-100",
+    text: "text-green-600",
+    border: "bg-green-500",
   },
 };
 
@@ -32,7 +32,7 @@ export default function HowItWorksSection() {
       title: "Register Your Business",
       description:
         "Create your profile and tell us about your produce requirements and preferences.",
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-16 h-14" />,
       color: "green",
     },
     {
@@ -40,7 +40,7 @@ export default function HowItWorksSection() {
       title: "Browse & Connect",
       description:
         "Explore verified farmers, review their products, and establish partnerships.",
-      icon: <Leaf className="w-8 h-8" />,
+      icon: <Leaf className="w-16 h-14" />,
       color: "blue",
     },
     {
@@ -48,7 +48,7 @@ export default function HowItWorksSection() {
       title: "Receive Fresh Produce",
       description:
         "Get regular deliveries of quality-assured produce with full traceability.",
-      icon: <Truck className="w-8 h-8" />,
+      icon: <Truck className="w-14 h-12" />,
       color: "purple",
     },
   ];
@@ -69,7 +69,7 @@ export default function HowItWorksSection() {
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
             Simple 3-Step Process
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl  max-w-3xl mx-auto leading-relaxed">
             Get started with fresh produce delivery in just three easy steps
           </p>
         </motion.div>
@@ -96,12 +96,12 @@ export default function HowItWorksSection() {
 
                 <div className="p-6 text-center relative">
                   {/* Icon */}
-                  <div className={`w-16 h-16 ${colorMap[item.color].bg} rounded-xl flex items-center justify-center ${colorMap[item.color].text} mx-auto mb-4`}>
+                  <div className={`w-16 h-16  rounded-xl flex items-center justify-center ${colorMap[item.color].text} mx-auto mb-4`}>
                     {item.icon}
                   </div>
 
                   {/* Step badge */}
-                  <div className="absolute -top-2 -right-2 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                  <div className="absolute -top-2 -right-2 w-10 h-10 bg-green-400 text-white rounded-full flex items-center justify-center text-sm font-bold">
                     {item.step}
                   </div>
 
@@ -109,7 +109,7 @@ export default function HowItWorksSection() {
                   <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
 
                   {/* Description */}
-                  <p className="mt-3 text-base text-gray-600 leading-relaxed">{item.description}</p>
+                  <p className="mt-3 text-base  leading-relaxed">{item.description}</p>
                 </div>
               </div>
             </motion.div>

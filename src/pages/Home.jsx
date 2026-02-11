@@ -5,6 +5,7 @@ import ProductsSection from "../components/ProductsSection.jsx";
 import CTASection from "../components/CTASection.jsx";
 import TestimonialsSection from "../components/TestimonialsSection.jsx";
 import ContactSection from "../components/ContactSection.jsx";
+import Map from "../components/Map.jsx";
 // import Footer from "../components/Footer.jsx";
 
 /**
@@ -24,14 +25,17 @@ import ContactSection from "../components/ContactSection.jsx";
  */
 export default function Home() {
   return (
-    <div className=" bg-white overflow-x-hidden pt-28">
+    <div className=" bg-white">
       <HeroSection />
       <AboutSection />
       <HowItWorksSection />
       <ProductsSection />
       <CTASection />
+       <Map/>
       <TestimonialsSection />
       <ContactSection />
+     
+      
       
     </div>
   );

@@ -24,14 +24,14 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 text-gray-800 font-sans">
+    <div className="min-h-screen bg-gradient-to-br from-green-10 to-emerald-100 text-gray-800 font-sans">
       <div className="container mx-auto px-4 py-16 md:px-6 lg:py-24">
         <div className="text-center space-y-6 mb-16 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-green-800 leading-tight">
             Contact Us
           </h1>
-          <p className="text-xl md:text-2xl text-emerald-700 font-medium">Judiye Bharat ke naye vyapar se.</p>
-          <p className="text-lg md:text-xl text-emerald-600">We&apos;re just one call, message or visit away.</p>
+          <p className="text-xl md:text-2xl font-medium">Judiye Bharat ke naye vyapar se.</p>
+          <p className="text-lg md:text-xl">We&apos;re just one call, message or visit away.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -45,7 +45,7 @@ export default function ContactUsPage() {
                 <MapPin className="h-8 w-8 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900">Regional Office:</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="leading-relaxed">
                     Satnarayan Bhagwan Campus, Mahadev Sthan, Supaul, Bihar – 852130
                   </p>
                 </div>
@@ -60,8 +60,8 @@ export default function ContactUsPage() {
               <div className="flex items-start gap-5 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
                 <Mail className="h-8 w-8 text-green-600 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">Email:</h3>
-                  <a href="mailto:support@nayavayapar.in" className="text-green-600 hover:underline">
+                  <h3 className="text-xl font-semibold ">Email:</h3>
+                  <a href="mailto:support@nayavayapar.in" className="hover:underline">
                     support@nayavayapar.in
                   </a>
                 </div>
@@ -69,12 +69,12 @@ export default function ContactUsPage() {
               <div className="flex items-start gap-5 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
                 <Globe className="h-8 w-8 text-green-600 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">Website:</h3>
+                  <h3 className="text-xl font-semibold">Website:</h3>
                   <a
                     href="https://www.nayavayapar.in"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-600 hover:underline"
+                    className="text-blue-600 hover:underline"
                   >
                     www.nayavayapar.in
                   </a>
@@ -251,7 +251,7 @@ export default function ContactUsPage() {
         </div>
 
         {/* Footer Quote */}
-        <div className="mt-20 text-center text-xl md:text-2xl text-emerald-700 italic font-serif max-w-3xl mx-auto">
+        <div className="mt-20 text-center text-xl md:text-2xl  italic font-serif max-w-3xl mx-auto">
           <p>&quot;Gaon se vyapar, vyapar se vikas — yehi hai NayaVayapar ka raasta.&quot;</p>
         </div>
       </div>

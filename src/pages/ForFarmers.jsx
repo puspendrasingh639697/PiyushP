@@ -12,6 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import ManagerSection from "./ManagerSection";
 
 export default function FarmersPage() {
   return (
@@ -82,7 +83,7 @@ export default function FarmersPage() {
               >
                 {item.icon}
                 <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
+                <p className="">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -92,29 +93,29 @@ export default function FarmersPage() {
       {/* What You Need Section */}
       <section className="py-16 md:py-24 bg-gray-100 w-full">
         <div className="w-full px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             What You Need to Start:
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white shadow-md rounded-lg border-l-4 border-yellow-500 p-6 flex items-start gap-4">
-              <Scan className="h-8 w-8 text-yellow-600 shrink-0 mt-1" />
+            <div className="bg-white shadow-md rounded-lg border-l-4 border-green-500 p-6 flex items-start gap-4">
+              <Scan className="h-8 w-8 text-green-600 shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg mb-1">Aadhaar (for verification)</h3>
-                <p className="text-gray-600 text-sm">Your unique identification for secure onboarding.</p>
+                <p className="text-sm">Your unique identification for secure onboarding.</p>
               </div>
             </div>
-            <div className="bg-white shadow-md rounded-lg border-l-4 border-yellow-500 p-6 flex items-start gap-4">
-              <Leaf className="h-8 w-8 text-yellow-600 shrink-0 mt-1" />
+            <div className="bg-white shadow-md rounded-lg border-l-4 border-green-500  p-6 flex items-start gap-4">
+              <Leaf className="h-8 w-8 text-green-600 shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg mb-1">Sample of your produce (for quality tagging)</h3>
-                <p className="text-gray-600 text-sm">To ensure quality standards and proper categorization.</p>
+                <p className=" text-sm">To ensure quality standards and proper categorization.</p>
               </div>
             </div>
-            <div className="bg-white shadow-md rounded-lg border-l-4 border-yellow-500 p-6 flex items-start gap-4">
-              <ClipboardList className="h-8 w-8 text-yellow-600 shrink-0 mt-1" />
+            <div className="bg-white shadow-md rounded-lg border-l-4 border-green-500  p-6 flex items-start gap-4">
+              <ClipboardList className="h-8 w-8 text-green-600 shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg mb-1">Basic details (name, village, contact)</h3>
-                <p className="text-gray-600 text-sm">Essential information to get you started quickly.</p>
+                <p className="text-sm">Essential information to get you started quickly.</p>
               </div>
             </div>
           </div>
@@ -127,20 +128,7 @@ export default function FarmersPage() {
         </div>
       </section>
 
-      {/* Meet Manager Section */}
-      <section className="py-16 md:py-24 bg-green-700 text-white w-full">
-        <div className="w-full px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Meet Your Area Manager</h2>
-          <div className="bg-white text-gray-800 p-8 rounded-lg shadow-xl max-w-md mx-auto">
-            <div className="flex flex-col items-center">
-              <Briefcase className="h-16 w-16 text-green-600 mb-4" />
-              <p className="text-3xl font-bold mb-2">Rahul Kumar</p>
-              <p className="text-2xl font-semibold text-green-700 mb-4">8116146987</p>
-              <p className="text-lg text-gray-500">आपको हर कदम पर साथ मिलेगा</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ManagerSection/>
 
       {/* CTA Buttons */}
       <section className="py-16 md:py-24 w-full">

@@ -7,7 +7,7 @@ export default function Footer() {
   const socialIcons = [Facebook, Twitter, Instagram, Linkedin];
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="text-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -16,11 +16,11 @@ export default function Footer() {
                 <Leaf className="w-6 h-6 text-white" />
               </div>
               <div>
-                <span className="text-xl font-bold">Naya Vayapar</span>
-                <div className="text-xs text-green-400">Farm to Business</div>
+                <span className="text-xl  text-black font-bold">Naya Vayapar</span>
+                <div className="text-xs text-green-600">Farm to Business</div>
               </div>
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-800 mb-6 leading-relaxed">
               Empowering farmers and enriching lives by bringing authentic, high-quality Makhana directly from the ponds of Bihar to the world.
             </p>
             <div className="flex space-x-4">
@@ -28,7 +28,7 @@ export default function Footer() {
                 <a
                   key={index}
                   href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors"
+                  className="w-10 h-10 bg-black rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors"
                 >
                   <Icon className="w-5 h-5" />
                 </a>
@@ -37,11 +37,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-green-400">Quick Links</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="font-semibold mb-4 text-green-600">Quick Links</h4>
+            <ul className="space-y-2 text-gray-800">
               {quickLinks.map((link) => (
                 <li key={link}>
-                  <a href="#" className="hover:text-green-400 transition-colors">
+                  <a href="#" className="hover:text-green-600 transition-colors">
                     {link}
                   </a>
                 </li>
@@ -50,8 +50,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-green-400">Our Products</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="font-semibold mb-4 text-green-600">Our Products</h4>
+            <ul className="space-y-2 text-black">
               {products.map((product) => (
                 <li key={product}>
                   <a href="#" className="hover:text-green-400 transition-colors">
@@ -63,8 +63,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-green-400">Contact</h4>
-            <div className="space-y-2 text-gray-400 text-sm">
+            <h4 className="font-semibold mb-4 text-green-600">Contact</h4>
+            <div className="space-y-2 text-black text-sm">
               <div>Rahul Kumar (Area Manager): 8116146987</div>
               <div>Roshan Kumar (Sales): 8116393432</div>
               <div>support@nayavayapar.in</div>
@@ -79,8 +79,8 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 mb-4 md:mb-0">© {new Date().getFullYear()} Naya Vayapar. All rights reserved.</p>
-            <div className="flex space-x-6 text-gray-400 text-sm">
+            <p className="text-black mb-4 md:mb-0">© {new Date().getFullYear()} Naya Vayapar. All rights reserved.</p>
+            <div className="flex space-x-6 text-black text-sm">
               {legalLinks.map((link) => (
                 <a key={link} href="#" className="hover:text-green-400 transition-colors">
                   {link}
@@ -88,7 +88,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="mt-4 text-center md:text-left text-gray-500 text-sm">
+          <div className="mt-4 text-center md:text-left text-black text-sm">
             "Gaon se vyapar, vyapar se vikas — yehi hai NayaVayapar ka raasta."
           </div>
         </div>

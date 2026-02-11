@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
             What Our Partners Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl  max-w-3xl mx-auto leading-relaxed">
             Hear from businesses and farmers who've transformed their operations with our platform
           </p>
         </motion.div>
@@ -80,8 +80,8 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-gray-600 text-base italic leading-relaxed mb-6">
-                  "{testimonial.content}"
+                <p className="text-base italic leading-relaxed mb-6">
+                  {testimonial.content}
                 </p>
 
                 {/* User Info */}
