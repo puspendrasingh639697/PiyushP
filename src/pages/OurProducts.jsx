@@ -68,6 +68,35 @@ export default function OurProducts() {
       features: ["Premium dry fruits", "Festive packaging", "Gift-ready"],
       popular: false,
     },
+
+    {
+      id: 5,
+      name: "Makhana Chivda with Dry Fruits",
+      description: "Mixed with almonds, raisins & spices",
+      price: "₹850/kg",
+      packaging: ["Festive packs available"],
+      bestFor: "Festive packs, gifting, online sales",
+      icon: "🥜",
+      gradient: "from-green-400 to-green-500",
+      bgGradient: "from-green-400 to-green-100",
+    
+      features: ["Premium dry fruits", "Festive packaging", "Gift-ready"],
+      popular: false,
+    },
+    {
+      id: 6,
+      name: "Makhana Chivda with Dry Fruits",
+      description: "Mixed with almonds, raisins & spices",
+      price: "₹850/kg",
+      packaging: ["Festive packs available"],
+      bestFor: "Festive packs, gifting, online sales",
+      icon: "🥜",
+      gradient: "from-green-400 to-green-500",
+      bgGradient: "from-green-400 to-green-100",
+    
+      features: ["Premium dry fruits", "Festive packaging", "Gift-ready"],
+      popular: false,
+    },
   ];
 
   return (
@@ -200,7 +229,7 @@ export default function OurProducts() {
         {/* CTA */}
         <div className="mt-20 text-center space-y-6 max-w-3xl mx-auto">
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-  Ready to Transform Your Business?
+  Ready to Transform Your Business
 </h3>
           <p className="text-sm sm:text-base md:text-lg  leading-relaxed">
             Join hundreds of retailers & wholesalers who trust NayaVayapar for premium Makhana supply.

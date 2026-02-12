@@ -64,7 +64,7 @@ export default function ImpactGalleryPage() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-50">
       {/* Hero Section */}
-      <section className="w-full py-20 md:py-28 lg:py-32 bg-gradient-to-br from-green-600 to-emerald-800 text-white text-center shadow-lg">
+      <section className="w-full py-20 md:py-28 lg:py-32 bg-gradient-to-br from-green-400 to-emerald-400 text-white text-center shadow-lg">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
             Impact & Gallery

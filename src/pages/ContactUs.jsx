@@ -27,11 +27,11 @@ export default function ContactUsPage() {
     <div className="min-h-screen bg-gradient-to-br from-green-10 to-emerald-100 text-gray-800 font-sans">
       <div className="container mx-auto px-4 py-16 md:px-6 lg:py-24">
         <div className="text-center space-y-6 mb-16 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-green-800 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-green-600 leading-tight">
             Contact Us
           </h1>
           <p className="text-xl md:text-2xl font-medium">Judiye Bharat ke naye vyapar se.</p>
-          <p className="text-lg md:text-xl">We&apos;re just one call, message or visit away.</p>
+          <p className="text-lg  md:text-xl">We&apos;re just one call, message or visit away.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -258,3 +258,4 @@ export default function ContactUsPage() {
     </div>
   );
 }
+

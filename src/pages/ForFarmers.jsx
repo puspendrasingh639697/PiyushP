@@ -18,12 +18,12 @@ export default function FarmersPage() {
   return (
     <div className="bg-gray-50 min-h-screen w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 lg:py-36 bg-gradient-to-br from-green-600 to-green-800 text-white overflow-hidden w-full">
+      <section className="relative py-20 md:py-28 lg:py-36 bg-gradient-to-br from-green-400 to-green-400 text-white overflow-hidden w-full">
         <div className="w-full px-6 text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4 drop-shadow-lg">
             For Farmers
           </h1>
-          <p className="text-xl md:text-2xl font-medium max-w-2xl mx-auto opacity-90">
+          <p className="text-xl md:text-2xl font-medium max-w-2xl mx-auto">
             Gaon ke khet se, global market tak – ek direct safar.
           </p>
         </div>
@@ -47,39 +47,39 @@ export default function FarmersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Scale className="h-12 w-12 text-green-600 mb-4" />,
+                icon: <Scale className="h-12 w-12 text-green-400 mb-4" />,
                 title: "Fair & Transparent Pricing",
                 desc: "Ensure you get the best value for your hard work with clear and honest pricing.",
               },
               {
-                icon: <Package className="h-12 w-12 text-green-600 mb-4" />,
+                icon: <Package className="h-12 w-12 text-green-400 mb-4" />,
                 title: "Assured Buyback of Makhana",
                 desc: "Guaranteed purchase of your Makhana produce, reducing market uncertainty.",
               },
               {
-                icon: <GraduationCap className="h-12 w-12 text-green-600 mb-4" />,
+                icon: <GraduationCap className="h-12 w-12 text-green-400 mb-4" />,
                 title: "Training on Sorting, Grading & Packaging",
                 desc: "Enhance your product quality and market appeal with expert training.",
               },
               {
-                icon: <MessageCircle className="h-12 w-12 text-green-600 mb-4" />,
+                icon: <MessageCircle className="h-12 w-12 text-green-400 mb-4" />,
                 title: "Helpline with Area Manager Support",
                 desc: "Direct support and guidance from your dedicated Area Manager.",
               },
               {
-                icon: <Smartphone className="h-12 w-12 text-green-600 mb-4" />,
+                icon: <Smartphone className="h-12 w-12 text-green-400 mb-4" />,
                 title: "Mobile App for Listing Products",
                 desc: "Easily list and manage your produce directly from your smartphone.",
               },
               {
-                icon: <CheckCircle className="h-12 w-12 text-green-600 mb-4" />,
+                icon: <CheckCircle className="h-12 w-12 text-green-400 mb-4" />,
                 title: "And Many More Benefits!",
                 desc: "Join our growing community and discover all the advantages of NayaVayapar.",
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border-t-4 border-green-500 p-6 text-center flex flex-col items-center"
+                className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border-t-2 border-green-500 p-6 text-center flex flex-col items-center"
               >
                 {item.icon}
                 <h3 className="font-semibold text-xl mb-2">{item.title}</h3>

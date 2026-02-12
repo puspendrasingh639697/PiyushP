@@ -78,23 +78,23 @@ export default function HeroSection() {
 
 
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-                Fresh Produce, <br />
+                Fresh Produce <br />
                 <span className="text-green-500">Direct Connection</span>
               </h1>
 
-              <p className="text-lg lg:text-xl text-gray-200 leading-relaxed max-w-lg">
+              <p className="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-lg">
                 Bridge the gap between farms and businesses with our innovative platform. 
                 Get quality produce directly from verified farmers.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold flex items-center justify-center group transition-all">
+              <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg  flex items-center justify-center group transition-all">
                 Start Partnership
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-bold flex items-center justify-center transition-all">
+              <button className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-3 rounded-lg  flex items-center justify-center transition-all">
                 <Play className="mr-2 w-5 h-5 fill-current" />
                 Watch Demo
               </button>
@@ -113,7 +113,7 @@ export default function HeroSection() {
   <img 
     src={first1} 
     alt="Farm" 
-    className="rounded-3xl object-cover h-full w-full shadow-2xl"
+    className="rounded-xl object-cover h-full w-full shadow-2xl"
   />
 
   {/* Overlay Cards */}

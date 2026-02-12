@@ -54,68 +54,87 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="how-it-works" className="py-24 bg-black/90 text-white">
+  <div className="container mx-auto px-6">
+    
+    <motion.div
+      className="text-center mb-16"
+      variants={fadeInUp}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
+      <span className="inline-block bg-green-600 text-white mb-4 px-4 py-2 text-sm">
+        How It Works
+      </span>
+
+      <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-green-500 tracking-tight">
+        Simple 3-Step Process
+      </h2>
+
+      <p className="text-xl max-w-3xl mx-auto leading-relaxed italic text-gray-300">
+        Get started with fresh produce delivery in just three easy steps
+      </p>
+    </motion.div>
+
+    <div className="grid lg:grid-cols-3 gap-8">
+
+      {steps.map((item, index) => (
         <motion.div
-          className="text-center mb-16"
+          key={index}
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
+          transition={{ delay: index * 0.2 }}
+          whileHover={{ y: -10 }}
+          className="group"
         >
-          <span className="inline-block bg-blue-100 text-blue-800 mb-4 px-4 py-2 rounded-full text-sm font-semibold">
-            How It Works
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
-            Simple 3-Step Process
-          </h2>
-          <p className="text-xl  max-w-3xl mx-auto leading-relaxed">
-            Get started with fresh produce delivery in just three easy steps
-          </p>
+          <div className="relative h-full p-8 rounded-xl 
+            bg-white backdrop-blur-lg 
+            border border-white/10
+            shadow-[0_10px_25px_rgba(0,0,0,0.4)]
+            hover:shadow-[0_20px_40px_rgba(0,255,150,0.25)]
+            hover:bg-gradient-to-br hover:from-green-600 hover:to-emerald-600
+            transition-all duration-500">
+
+            {/* Step Badge */}
+            <div className="absolute -top-4 -right-4 w-12 h-12 
+              bg-green-500 text-white text-black font-bold 
+              rounded-full flex items-center justify-center 
+              shadow-lg">
+              {item.step}
+            </div>
+
+            {/* Icon */}
+            <div className="w-16 h-16 mx-auto mb-6 
+              flex items-center justify-center 
+              text-green-500
+              transition-all duration-300
+              group-hover:text-white
+              group-hover:scale-110">
+              {item.icon}
+            </div>
+
+            {/* Title */}
+            <h3 className="text-xl font-semibold text-green-500 
+              group-hover:text-white tracking-tight">
+              {item.title}
+            </h3>
+
+            {/* Description */}
+            <p className="mt-4 text-black italic 
+              group-hover:text-white/90 leading-relaxed">
+              {item.description}
+            </p>
+
+          </div>
         </motion.div>
+      ))}
 
-        <div className="grid lg:grid-cols-3 gap-8 relative">
-          {/* Connection Lines */}
-          <div className="hidden lg:block absolute top-1/2 left-1/3 w-1/3 h-0.5 bg-gradient-to-r from-green-300 to-blue-300 transform -translate-y-1/2" />
-          <div className="hidden lg:block absolute top-1/2 right-1/3 w-1/3 h-0.5 bg-gradient-to-r from-blue-300 to-purple-300 transform -translate-y-1/2" />
+    </div>
+  </div>
+</section>
 
-          {steps.map((item, index) => (
-            <motion.div
-              key={index}
-              className="relative"
-              variants={fadeInUp}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white relative overflow-hidden rounded-xl">
-                {/* Top Border */}
-                <div className={`absolute top-0 left-0 w-full h-1 ${colorMap[item.color].border}`} />
-
-                <div className="p-6 text-center relative">
-                  {/* Icon */}
-                  <div className={`w-16 h-16  rounded-xl flex items-center justify-center ${colorMap[item.color].text} mx-auto mb-4`}>
-                    {item.icon}
-                  </div>
-
-                  {/* Step badge */}
-                  <div className="absolute -top-2 -right-2 w-10 h-10 bg-green-400 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                    {item.step}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-
-                  {/* Description */}
-                  <p className="mt-3 text-base  leading-relaxed">{item.description}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }

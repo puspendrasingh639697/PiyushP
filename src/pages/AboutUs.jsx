@@ -32,7 +32,7 @@ export default function AboutUs() {
       {/* Header Section */}
       <section className="max-w-4xl mx-auto px-4 text-center mb-16">
 
-        <h1 className="text-4xl md:text-6xl font-black text-green-900 tracking-tight mb-4">
+        <h1 className="text-4xl md:text-6xl font-black  tracking-tight mb-4">
           About <span className="text-green-600">Us</span>
         </h1>
         <p className="text-lg md:text-xl font-medium">Bihar ki mitti, modern tech, aur kishano ka vishwas.</p>
@@ -43,7 +43,7 @@ export default function AboutUs() {
         {/* Our Story Section */}
       <section className="relative overflow-hidden top-20 bg-white shadow-2xl shadow-green-100/50  p-8 md:p-14 border border-green-50">
   <div className="relative z-10">
-    <div className="flex items-center gap-3 mb-6">
+    <div className="flex items-center gap-3">
       <h2 className="text-3xl md:text-4xl font-extrabold text-green-800">Our Story</h2>
     </div>
     <div className="grid md:grid-cols-2 gap-10   items-center">
