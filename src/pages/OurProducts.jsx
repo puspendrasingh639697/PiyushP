@@ -1,4 +1,4 @@
-"use client"
+ "use client"
 
 import {
   Package,
@@ -8,12 +8,10 @@ import {
   Gift,
   ShoppingCart,
   Sparkles,
-  Award,
-  Leaf,
-  Heart,
 } from "lucide-react";
 
 export default function OurProducts() {
+
   const products = [
     {
       id: 1,
@@ -22,10 +20,11 @@ export default function OurProducts() {
       price: "₹750–₹1350/kg",
       packaging: ["250g", "500g", "1kg"],
       bestFor: "Retailers, Ayurvedic stores",
-      icon: "💎",
-      gradient: "from-green-400 to-green-500",
-      bgGradient: "from-green-400 to-green-100",
-      features: ["Extra large size", "Premium quality", "Perfect for gifting"],
+      features: [
+        "Extra large size",
+        "Premium quality",
+        "Perfect for gifting",
+      ],
       popular: true,
     },
     {
@@ -35,10 +34,11 @@ export default function OurProducts() {
       price: "₹450–₹500/kg",
       packaging: ["Bulk supply available"],
       bestFor: "B2B buyers, wholesalers",
-      icon: "📏",
-      gradient: "from-green-400 to-green-500",
-      bgGradient: "from-green-400 to-green-100",
-      features: ["Medium-size grains", "Cost-effective", "Bulk quantities"],
+      features: [
+        "Medium-size grains",
+        "Cost-effective",
+        "Bulk quantities available",
+      ],
       popular: false,
     },
     {
@@ -46,12 +46,13 @@ export default function OurProducts() {
       name: "Roasted Makhana (Masala Mix)",
       description: "With jeera, pudina, and light salt",
       price: "₹1150/kg",
-      packaging: ["Ready to eat"],
+      packaging: ["Ready to eat packs"],
       bestFor: "Modern retail & startups",
-      icon: "🌶️",
-      gradient: "from-green-400 to-green-500",
-      bgGradient: "from-green-400 to-green-100",
-      features: ["Ready to eat", "Healthy snack", "Flavored with spices"],
+      features: [
+        "Ready to eat",
+        "Healthy snack option",
+        "Flavored with natural spices",
+      ],
       popular: false,
     },
     {
@@ -60,198 +61,200 @@ export default function OurProducts() {
       description: "Mixed with almonds, raisins & spices",
       price: "₹850/kg",
       packaging: ["Festive packs available"],
-      bestFor: "Festive packs, gifting, online sales",
-      icon: "🥜",
-      gradient: "from-green-400 to-green-500",
-      bgGradient: "from-green-400 to-green-100",
-    
-      features: ["Premium dry fruits", "Festive packaging", "Gift-ready"],
+      bestFor: "Festive gifting & online sales",
+      features: [
+        "Premium dry fruits mix",
+        "Festive packaging",
+        "Gift-ready product",
+      ],
       popular: false,
     },
-
     {
       id: 5,
-      name: "Makhana Chivda with Dry Fruits",
-      description: "Mixed with almonds, raisins & spices",
-      price: "₹850/kg",
-      packaging: ["Festive packs available"],
-      bestFor: "Festive packs, gifting, online sales",
-      icon: "🥜",
-      gradient: "from-green-400 to-green-500",
-      bgGradient: "from-green-400 to-green-100",
-    
-      features: ["Premium dry fruits", "Festive packaging", "Gift-ready"],
+      name: "Organic Farm Fresh Makhana",
+      description: "Naturally grown, chemical-free processing",
+      price: "₹900–₹1200/kg",
+      packaging: ["500g", "1kg"],
+      bestFor: "Health stores & organic brands",
+      features: [
+        "100% organic",
+        "No chemicals",
+        "Premium farm sourcing",
+      ],
       popular: false,
     },
     {
       id: 6,
-      name: "Makhana Chivda with Dry Fruits",
-      description: "Mixed with almonds, raisins & spices",
-      price: "₹850/kg",
-      packaging: ["Festive packs available"],
-      bestFor: "Festive packs, gifting, online sales",
-      icon: "🥜",
-      gradient: "from-green-400 to-green-500",
-      bgGradient: "from-green-400 to-green-100",
-    
-      features: ["Premium dry fruits", "Festive packaging", "Gift-ready"],
+      name: "Export Quality Makhana",
+      description: "Carefully sorted for international markets",
+      price: "₹1400/kg",
+      packaging: ["Export bulk packs"],
+      bestFor: "International distributors",
+      features: [
+        "Export grade sorting",
+        "Moisture controlled",
+        "High-quality packaging",
+      ],
       popular: false,
     },
   ];
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden  mt-16 relative">
-      {/* Decorative Blurs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-20 -left-20 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-orange-200/30 to-amber-200/30 rounded-full blur-3xl" />
-        <div className="absolute top-1/3 -right-20 w-80 h-80 sm:w-[28rem] sm:h-[28rem] bg-gradient-to-r from-yellow-200/30 to-orange-200/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-amber-200/30 to-yellow-200/30 rounded-full blur-3xl" />
-      </div>
+    <div className="min-h-screen w-full mt-16 bg-black/90 text-white">
 
-      <div className="relative w-full px-4 sm:px-6 lg:px-8 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-         
+      <div className="px-6 py-20">
 
-<h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
-  <span className="text-black">Our </span>
-  <span className="text-green-600">Products</span>
-</h1>
+        {/* HERO SECTION */}
+        <div className="text-center mb-20">
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+            <span className="text-white">Our </span>
+            <span className="text-green-400 drop-shadow-[0_0_25px_rgba(34,197,94,0.9)]">
+              Products
+            </span>
+          </h1>
 
-
-          <h2 className="text-2xl sm:text-3xl font-bold  mb-4">
-            Makhana Varieties We Offer
+          <h2 className="text-2xl md:text-3xl text-gray-300 mt-6 font-semibold">
+            Premium Makhana Varieties We Offer
           </h2>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 text-lg sm:text-2xl font-semibold  mb-6">
-            
-            <span>Handpicked. Hygienic. Honest.</span>
-            
-          </div>
-
-          <p className="text-base sm:text-lg md:text-xl  max-w-3xl mx-auto font-medium leading-relaxed">
-            NayaVayapar offers carefully sorted, quality-tested Makhana — straight from Bihar's pristine ponds to your premium shelves.
+          <p className="text-gray-400 mt-4 max-w-3xl mx-auto text-lg">
+            NayaVayapar provides high-quality Makhana sourced directly from
+            Bihar farms. Carefully sorted, hygienically packed and ready
+            for retail & bulk distribution.
           </p>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full">
+        {/* PRODUCTS GRID */}
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+
           {products.map((product) => (
             <div
               key={product.id}
-              className={`group relative p-6 bg-gradient-to-br ${product.bgGradient} rounded-xl shadow-lg hover:shadow-2xl transition-all`}
+              className="relative p-8 rounded-2xl 
+              bg-white/5 backdrop-blur-xl
+              border border-white/10
+              shadow-[0_0_40px_rgba(0,0,0,0.6)]
+              hover:shadow-[0_0_40px_rgba(34,197,94,0.4)]
+              transition duration-500 hover:-translate-y-3"
             >
+
               {product.popular && (
-                <div className="absolute top-4 right-4">
-                  <span className="inline-flex items-center bg-gradient-to-r from-green-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full shadow-md">
-                    <Star className="w-3 h-3 mr-1" />
-                    Most Popular
+                <div className="absolute top-5 right-5">
+                  <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs border border-green-400/40 shadow-[0_0_15px_rgba(34,197,94,0.6)] flex items-center gap-1">
+                    <Star size={12} /> Most Popular
                   </span>
                 </div>
               )}
 
-              <div className="flex items-start gap-4 mb-4">
-                
-                <div>
-                  <h3 className="text-xl sm:text-2xl">{product.name}</h3>
-                  <p className="text-sm sm:text-base">{product.description}</p>
+              <h3 className="text-2xl font-bold mb-3 text-white">
+                {product.name}
+              </h3>
+
+              <p className="text-gray-400 text-sm mb-6">
+                {product.description}
+              </p>
+
+              {/* PRICE */}
+              <div className="mb-6 p-4 rounded-xl bg-black/40 border border-white/10">
+                <div className="text-xs text-gray-400">Average Price</div>
+                <div className="text-2xl font-bold text-green-400 drop-shadow-[0_0_15px_rgba(34,197,94,0.8)]">
+                  {product.price}
                 </div>
               </div>
 
-              <div className="mb-4 space-y-4">
-                {/* Price */}
-                <div className="flex items-center gap-3 p-3 bg-white/70 rounded-lg">
-                  <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold">
-                    ₹
-                  </div>
-                  <div>
-                    <div className="text-sm">Average Price</div>
-                    <div className="text-lg sm:text-xl font-bold text-green-600">{product.price}</div>
-                  </div>
+              {/* PACKAGING */}
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-2 text-green-400 font-semibold">
+                  <Package size={16} /> Packaging Options
                 </div>
-
-                {/* Packaging */}
-                <div>
-                  <div className="flex items-center gap-2 font-semibold text-gray-700 mb-2">
-                    <Package className="w-5 h-5" />
-                    Packaging Options
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {product.packaging.map((p, i) => (
-                      <span key={i} className="bg-white/90 px-3 py-1 rounded-full text-sm text-gray-700 shadow-sm">
-                        {p}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {product.packaging.map((p, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 text-sm rounded-full 
+                      bg-green-500/10 border border-green-400/30 
+                      text-green-300"
+                    >
+                      {p}
+                    </span>
+                  ))}
                 </div>
-
-                {/* Best For */}
-                <div className="flex flex-wrap items-center gap-2 font-semibold text-gray-700">
-                  <Users className="w-5 h-5" />
-                  Perfect For: <span className="ml-1 font-medium">{product.bestFor}</span>
-                </div>
-
-                {/* Features */}
-                <div>
-                  <div className="flex items-center gap-2 font-semibold text-gray-700 mb-2">
-                    <Sparkles className="w-5 h-5" />
-                    Key Features
-                  </div>
-                  <ul className="grid gap-1">
-                    {product.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${product.gradient}`} />
-                        <span className="text-gray-700 text-sm sm:text-base">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Image */}
-                <img
-                  src="/placeholder.svg"
-                  alt={product.name}
-                  className="w-full h-40 sm:h-48 md:h-56 object-cover rounded-xl shadow group-hover:scale-105 transition-transform"
-                />
-
-                {/* Order Button */}
-                <button
-                  className={`mt-4 w-full h-11 sm:h-12 bg-gradient-to-r ${product.gradient} text-white font-semibold rounded-lg flex items-center justify-center gap-2 hover:shadow-lg transition`}
-                >
-                  <ShoppingCart className="w-5 h-5" />
-                  Order in Bulk
-                </button>
               </div>
+
+              {/* BEST FOR */}
+              <div className="mb-4 text-gray-300 text-sm">
+                <span className="text-green-400 font-semibold">
+                  Perfect For:
+                </span>{" "}
+                {product.bestFor}
+              </div>
+
+              {/* FEATURES */}
+              <div className="mb-6">
+                <div className="flex items-center gap-2 mb-2 text-green-400 font-semibold">
+                  <Sparkles size={16} /> Key Features
+                </div>
+                <ul className="space-y-2">
+                  {product.features.map((f, i) => (
+                    <li key={i} className="flex items-center gap-2 text-gray-300 text-sm">
+                      <div className="w-2 h-2 bg-green-400 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.8)]" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* BUTTON */}
+              <button className="w-full py-3 rounded-xl 
+              bg-green-500/20 border border-green-400/40
+              text-green-400 font-semibold
+              hover:bg-green-500 hover:text-black
+              hover:shadow-[0_0_25px_rgba(34,197,94,0.9)]
+              transition duration-300 flex items-center justify-center gap-2">
+                <ShoppingCart size={18} />
+                Order in Bulk
+              </button>
+
             </div>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-20 text-center space-y-6 max-w-3xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-  Ready to Transform Your Business
+        {/* CTA SECTION */}
+        <div className="mt-28 text-center">
+        <h3 className="text-4xl font-bold text-white">
+  Ready to Scale Your{" "}
+  <span className="
+    text-green-400 
+    drop-shadow-[0_5px_0_#065f46]
+    drop-shadow-[0_10px_20px_rgba(34,197,94,0.6)]
+    tracking-wide
+  ">
+    Business
+  </span>
+  ?
 </h3>
-          <p className="text-sm sm:text-base md:text-lg  leading-relaxed">
-            Join hundreds of retailers & wholesalers who trust NayaVayapar for premium Makhana supply.
+
+
+          <p className="text-gray-400 mt-4">
+            Join hundreds of retailers & distributors who trust NayaVayapar
+            for premium quality Makhana supply.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-            <button className="px-6 py-3 bg-gradient-to-r from-green-700 to-emerald-600 text-white rounded-lg font-semibold hover:scale-105 transition">
-              <Star className="w-5 h-5 mr-2 inline" />
-              Get Instant Price Sheet
+
+          <div className="flex flex-wrap gap-4 justify-center mt-8">
+            <button className="px-6 py-3 rounded-lg bg-green-500 text-black font-semibold hover:shadow-[0_0_30px_rgba(34,197,94,1)] transition flex items-center gap-2">
+              <Truck size={18} />
+              Get Price Sheet
             </button>
-            <button className="px-6 py-3 bg-gradient-to-r from-green-700 to-emerald-600 text-white rounded-lg font-semibold hover:scale-105 transition">
-              <Truck className="w-5 h-5 mr-2 inline" />
-              Place Bulk Order Now
-            </button>
-            <button className="px-6 py-3 bg-gradient-to-r from-green-700 to-emerald-600 to-indigo-600 text-white rounded-lg font-semibold hover:scale-105 transition">
-              <Gift className="w-5 h-5 mr-2 inline" />
-              Custom Packaging
+
+            <button className="px-6 py-3 rounded-lg border border-green-400 text-green-400 hover:bg-green-500 hover:text-black transition flex items-center gap-2">
+              <Gift size={18} />
+              Place Bulk Order
             </button>
           </div>
         </div>
+
       </div>
     </div>
   );
 }
-
 

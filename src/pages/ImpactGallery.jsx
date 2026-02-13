@@ -62,220 +62,365 @@ export default function ImpactGalleryPage() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-50">
+    <main className="flex flex-col font-serif items-center justify-center min-h-screen  bg-black/90  text-gray-900">
       {/* Hero Section */}
-      <section className="w-full py-20 md:py-28 lg:py-32 bg-gradient-to-br from-green-400 to-emerald-400 text-white text-center shadow-lg">
+      <section className="w-full py-20 md:py-28 lg:py-32 
+        text-white text-center">
+
         <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-            Impact & Gallery
+
+          {/* Heading */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl 
+    font-extrabold tracking-tight mb-6 leading-tight">
+            <span className="text-white">Impact &</span>{" "}
+            <span className="text-green-500">Gallery</span>
           </h1>
-          <p className="text-2xl md:text-3xl font-semibold text-green-100 mb-8">{"Har ek dana, ek kahani hai."}</p>
-          <p className="text-lg md:text-xl text-green-50 max-w-2xl mx-auto">
+
+          {/* Tagline */}
+          <p className="text-2xl md:text-3xl font-semibold text-green-400 mb-8">
+            {"Har ek dana, ek kahani hai."}
+          </p>
+
+          {/* Description */}
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
             At NayaVayapar, we don't measure success in profits — we measure it in smiles, savings, and self-respect of
             every farmer we work with.
           </p>
+
         </div>
       </section>
 
       {/* Impact in Numbers */}
-      <section className="w-full py-16 bg-white">
-  <div className="container mx-auto px-4 max-w-7xl text-center">
-    <h2 className="text-4xl md:text-5xl font-bold mb-12">
-      Why Choose NayaVyapar?
+      <section className="w-full py-16">
+        <div className="container mx-auto px-4 max-w-7xl text-center">
+
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-14 text-white">
+            Why Choose <span className="text-green-500">NayaVyapar?</span>
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            {/* Card 1 */}
+            <div className="group bg-white p-8 rounded-2xl shadow-md 
+      transition-all duration-300 transform 
+      hover:-translate-y-3 hover:shadow-2xl hover:bg-green-500">
+
+              <Shield className="h-12 w-12 mb-6 text-green-600 
+        transition-all duration-300 group-hover:text-white group-hover:scale-110" />
+
+              <h3 className="text-xl font-semibold tracking-tight mb-3 text-green-600 
+        transition-all duration-300 group-hover:text-white">
+                Technology-Driven Tracking & Visibility
+              </h3>
+
+              <p className="text-base italic leading-relaxed text-gray-600 
+        transition-all duration-300 group-hover:text-green-100">
+                Real-time tracking, instant updates, and smart dashboard for smooth operations.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="group bg-white p-8 rounded-2xl shadow-md 
+      transition-all duration-300 transform 
+      hover:-translate-y-3 hover:shadow-2xl hover:bg-green-500">
+
+              <TrendingUp className="h-12 w-12 mb-6 text-green-600 
+        transition-all duration-300 group-hover:text-white group-hover:scale-110" />
+
+              <h3 className="text-xl font-semibold tracking-tight mb-3 text-green-600 
+        transition-all duration-300 group-hover:text-white">
+                Reliable & Trustworthy Services
+              </h3>
+
+              <p className="text-base italic leading-relaxed text-gray-600 
+        transition-all duration-300 group-hover:text-green-100">
+                Verified partners ensure safe handling and on-time delivery.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="group bg-white p-8 rounded-2xl shadow-md 
+      transition-all duration-300 transform 
+      hover:-translate-y-3 hover:shadow-2xl hover:bg-green-500">
+
+              <Play className="h-12 w-12 mb-6 text-green-600 
+        transition-all duration-300 group-hover:text-white group-hover:scale-110" />
+
+              <h3 className="text-xl font-semibold tracking-tight mb-3 text-green-600 
+        transition-all duration-300 group-hover:text-white">
+                Easy & Hassle-Free Logistics Management
+              </h3>
+
+              <p className="text-base italic leading-relaxed text-gray-600 
+        transition-all duration-300 group-hover:text-green-100">
+                Simple tools to plan, book, and manage shipments in a few clicks.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="group bg-white p-8 rounded-2xl shadow-md 
+      transition-all duration-300 transform 
+      hover:-translate-y-3 hover:shadow-2xl hover:bg-green-500">
+
+              <Lightbulb className="h-12 w-12 mb-6 text-green-600 
+        transition-all duration-300 group-hover:text-white group-hover:scale-110" />
+
+              <h3 className="text-xl font-semibold tracking-tight mb-3 text-green-600 
+        transition-all duration-300 group-hover:text-white">
+                Scalable for Every Need
+              </h3>
+
+              <p className="text-base italic leading-relaxed text-gray-600 
+        transition-all duration-300 group-hover:text-green-100">
+                Flexible solutions that grow with your business.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      {/* Faces of the Revolution (Photo Gallery) */}
+      <section className="w-full py-16 md:py-20">
+  <div className="container mx-auto px-4 max-w-7xl">
+
+    {/* Heading */}
+    <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-white">
+      Faces of the <span className="text-green-600">Revolution</span>
     </h2>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-      {/* Item 1 */}
-      <div className="flex flex-col items-center">
-        <Shield className="h-12 w-12 mb-4 text-green-600" />
-        <h3 className="font-semibold text-lg mb-2">Technology-Driven Tracking & Visibility</h3>
-        <p className="text-sm">
-          Real-time tracking, instant updates, and smart dashboard for smooth operations.
-        </p>
-      </div>
+    <p className="text-xl italic text-center mb-12 text-white">
+      {"“Behind every seed, there is a story.”"}
+    </p>
 
-      {/* Item 2 */}
-      <div className="flex flex-col items-center">
-        <TrendingUp className="h-12 w-12 mb-4 text-green-600" />
-        <h3 className="font-semibold text-lg mb-2">Reliable & Trustworthy Services</h3>
-        <p className="text-sm">
-          Verified partners ensure safe handling and on-time delivery.
-        </p>
-      </div>
+    {/* Gallery Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {galleryImages.map((image, index) => (
+        <div
+          key={index}
+          className="relative group overflow-hidden rounded-2xl 
+          shadow-md bg-white border border-gray-200
+          transition-all duration-300 transform 
+          hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-200"
+        >
+          <img
+            src={image.src || "/placeholder.svg"}
+            alt={image.alt}
+            className="w-full h-64 object-cover 
+            transition-transform duration-500 group-hover:scale-110"
+          />
 
-      {/* Item 3 */}
-      <div className="flex flex-col items-center">
-        <Play className="h-12 w-12 mb-4 text-green-600" />
-        <h3 className="font-semibold text-lg mb-2">Easy & Hassle-Free Logistics Management</h3>
-        <p className="text-sm">
-          Simple tools to plan, book, and manage shipments in a few clicks.
-        </p>
-      </div>
+          {/* Green overlay on hover */}
+          <div className="absolute inset-0 bg-gradient-to-t 
+          from-green-600/90 to-transparent 
+          flex items-end p-5 opacity-0 
+          transition-all duration-300 
+          group-hover:opacity-100">
 
-      {/* Item 4 */}
-      <div className="flex flex-col items-center">
-        <Lightbulb className="h-12 w-12 mb-4 text-green-600" />
-        <h3 className="font-semibold text-lg mb-2">Scalable for Every Need</h3>
-        <p className="text-sm">
-          Flexible solutions that grow with your business.
-        </p>
-      </div>
+            <p className="text-white text-base font-semibold tracking-wide">
+              {image.caption}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Buttons */}
+    <div className="flex flex-wrap justify-center gap-6 mt-14">
+
+      <a
+        href="#"
+        className="px-8 py-3 bg-green-600 text-white font-semibold 
+        rounded-xl shadow-md 
+        transition-all duration-300 
+        hover:-translate-y-1 hover:shadow-lg hover:shadow-green-300"
+      >
+        See All Stories
+      </a>
+
+      <a
+        href="#"
+        className="px-8 py-3 border-2 border-green-600 text-green-600 
+        font-semibold rounded-xl flex items-center
+        transition-all duration-300
+        hover:bg-green-600 hover:text-white 
+        hover:-translate-y-1 hover:shadow-lg"
+      >
+        <Upload className="mr-2 h-5 w-5" />
+        Upload Your Story
+      </a>
+
     </div>
   </div>
 </section>
 
-
-      {/* Faces of the Revolution (Photo Gallery) */}
-      <section className="w-full py-16 md:py-20 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800 dark:text-gray-100">
-            Faces of the Revolution
-          </h2>
-          <p className="text-xl  text-center mb-12">{"“Behind every seed, there is a story.”"}</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-            {galleryImages.map((image, index) => (
-              <div
-                key={index}
-                className="relative group overflow-hidden rounded-xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
-              >
-                <img
-                  src={image.src || "/placeholder.svg"}
-                  alt={image.alt}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-base font-medium">{image.caption}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 mt-12">
-            <a href="#" className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors">
-              See All Stories
-            </a>
-            <a href="#" className="px-6 py-3 border border-gray-300 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800 font-medium rounded-lg transition-colors flex items-center">
-              <Upload className="mr-2 h-5 w-5" />
-              Upload Your Story
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Video Snippets */}
-      <section className="w-full py-16 md:py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800 dark:text-gray-100">
-            Video Snippets
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="aspect-video rounded-xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example" // Placeholder YouTube embed
-                title="Field Visits"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-xl"
-              ></iframe>
-            </div>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example" // Placeholder YouTube embed
-                title="Farmer Interviews"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-xl"
-              ></iframe>
-            </div>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example" // Placeholder YouTube embed
-                title="Makhana Harvesting & Popping"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-xl"
-              ></iframe>
-            </div>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example" // Placeholder YouTube embed
-                title="Naya Bypar App Demo"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-xl"
-              ></iframe>
-            </div>
-          </div>
-          <div className="flex justify-center mt-12">
-            <a 
-              href="#" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors flex items-center"
-            >
-              <PlayCircle className="mr-2 h-5 w-5" />
-              Watch Full Journey on YouTube
-            </a>
-          </div>
-        </div>
-      </section>
+      <section className="w-full py-16 md:py-20">
+  <div className="container mx-auto px-4 max-w-7xl">
+
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-green-600">
+     <span className="text-white"> Video</span> Snippets
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      {/* Video 1 */}
+      <div className="aspect-video rounded-xl overflow-hidden 
+      shadow-xl border-2 border-green-500 bg-green-100">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example"
+          title="Field Visits"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="rounded-xl"
+        ></iframe>
+      </div>
+
+      {/* Video 2 */}
+      <div className="aspect-video rounded-xl overflow-hidden 
+      shadow-xl border-2 border-green-500 bg-green-100">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example"
+          title="Farmer Interviews"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="rounded-xl"
+        ></iframe>
+      </div>
+
+      {/* Video 3 */}
+      <div className="aspect-video rounded-xl overflow-hidden 
+      shadow-xl border-2 border-green-500 bg-green-100">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example"
+          title="Makhana Harvesting & Popping"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="rounded-xl"
+        ></iframe>
+      </div>
+
+      {/* Video 4 */}
+      <div className="aspect-video rounded-xl overflow-hidden 
+      shadow-xl border-2 border-green-500 bg-green-100">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example"
+          title="Naya Bypar App Demo"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="rounded-xl"
+        ></iframe>
+      </div>
+
+    </div>
+
+    <div className="flex justify-center mt-12">
+     <a
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-3 bg-green-500 
+  text-white font-medium rounded-lg 
+  flex items-center shadow-md
+  transition-all duration-300
+  hover:shadow-2xl hover:shadow-green-300"
+>
+        <PlayCircle className="mr-2 h-5 w-5" />
+        Watch Full Journey on YouTube
+      </a>
+    </div>
+
+  </div>
+</section>
 
       {/* Testimonials */}
-      <section className="w-full py-16 md:py-20 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800 dark:text-gray-100">
-            Testimonials
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="p-8 flex flex-col justify-between bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700"
-              >
-                <div className="mb-6 text-xl italic  dark:text-gray-300 relative">
-                  <Quote className="absolute -top-4 -left-4 h-10 w-10 text-green-300 dark:text-green-700/30" />
-                  <span className="relative z-10">
-                    {"“"}
-                    {testimonial.quote}
-                    {"”"}
-                  </span>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-50">
-                    {testimonial.author}
-                  </h3>
-                  <p className="text-base text-gray-600 dark:text-gray-400">{testimonial.role}</p>
-                </div>
-              </div>
-            ))}
+      <section className="w-full py-16 md:py-20">
+  <div className="container mx-auto px-4 max-w-7xl">
+
+    {/* Heading */}
+    <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-14 text-green-500">
+      Testimonials
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {testimonials.map((testimonial, index) => (
+        <div
+          key={index}
+          className="group p-8 flex flex-col justify-between 
+          bg-white rounded-2xl shadow-md border border-green-100
+          transition-all duration-300 transform
+          hover:-translate-y-3 hover:bg-green-500 
+          hover:shadow-2xl hover:shadow-green-400"
+        >
+          {/* Quote */}
+          <div className="mb-6 text-lg italic text-gray-700 relative 
+          transition-all duration-300 group-hover:text-white">
+            
+            <Quote className="absolute -top-4 -left-4 h-10 w-10 
+            text-green-300 transition-all duration-300 
+            group-hover:text-white" />
+
+            <span className="relative z-10">
+              {"“"}
+              {testimonial.quote}
+              {"”"}
+            </span>
           </div>
-          <div className="flex justify-center mt-12">
-            <a href="#" className="px-6 py-3 border border-gray-300 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800 font-medium rounded-lg transition-colors">
-              Submit Your Testimonial
-            </a>
+
+          {/* Author */}
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 
+            transition-all duration-300 group-hover:text-white">
+              {testimonial.author}
+            </h3>
+
+            <p className="text-sm text-gray-600 
+            transition-all duration-300 group-hover:text-green-100">
+              {testimonial.role}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
 
+    {/* Button */}
+    <div className="flex justify-center mt-14">
+      <a
+        href="#"
+        className="px-8 py-3 border-2 border-green-500 text-green-500 
+        font-semibold rounded-xl 
+        transition-all duration-300
+        hover:bg-green-500 hover:text-white 
+        hover:shadow-lg hover:shadow-green-400"
+      >
+        Submit Your Testimonial
+      </a>
+    </div>
+
+  </div>
+</section>
       {/* Download Report */}
-      <section className="w-full py-16 md:py-20 bg-white dark:bg-gray-900 text-center">
+      <section className="w-full py-16 md:py-20  dark:bg-gray-900 text-center">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-800 dark:text-gray-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white dark:text-gray-100">
             Want to dive deeper into our impact?
           </h2>
-          <a 
-            href="/impact-report.pdf" 
+          <a
+            href="/impact-report.pdf"
             download
             className="inline-block px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors text-lg"
           >

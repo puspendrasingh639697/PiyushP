@@ -8,7 +8,6 @@ import {
   Scan,
   Leaf,
   ClipboardList,
-  Briefcase,
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -16,146 +15,172 @@ import ManagerSection from "./ManagerSection";
 
 export default function FarmersPage() {
   return (
-    <div className="bg-gray-50 min-h-screen w-full overflow-x-hidden">
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-28 lg:py-36 bg-gradient-to-br from-green-400 to-green-400 text-white overflow-hidden w-full">
-        <div className="w-full px-6 text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4 drop-shadow-lg">
-            For Farmers
-          </h1>
-          <p className="text-xl md:text-2xl font-medium max-w-2xl mx-auto">
-            Gaon ke khet se, global market tak – ek direct safar.
-          </p>
-        </div>
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <pattern id="pattern-circles" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="10" cy="10" r="1" fill="white" />
-            </pattern>
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
-          </svg>
-        </div>
+    <div className="min-h-screen w-full overflow-x-hidden bg-black/90 text-white font-sans tracking-wide">
+
+      {/* HERO */}
+      <section className="relative py-24 mt-10 text-center">
+        <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight">
+          For <span className="text-green-500">Farmers</span>
+        </h1>
+
+        <p className="text-gray-400 mt-6 text-xl max-w-2xl mx-auto font-medium">
+          Gaon ke khet se, global market tak – ek direct safar.
+        </p>
       </section>
 
-      {/* Why Join Section */}
-      <section className="py-16 md:py-24 w-full">
-        <div className="w-full px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-            Why Join NayaVayapar?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Scale className="h-12 w-12 text-green-400 mb-4" />,
-                title: "Fair & Transparent Pricing",
-                desc: "Ensure you get the best value for your hard work with clear and honest pricing.",
-              },
-              {
-                icon: <Package className="h-12 w-12 text-green-400 mb-4" />,
-                title: "Assured Buyback of Makhana",
-                desc: "Guaranteed purchase of your Makhana produce, reducing market uncertainty.",
-              },
-              {
-                icon: <GraduationCap className="h-12 w-12 text-green-400 mb-4" />,
-                title: "Training on Sorting, Grading & Packaging",
-                desc: "Enhance your product quality and market appeal with expert training.",
-              },
-              {
-                icon: <MessageCircle className="h-12 w-12 text-green-400 mb-4" />,
-                title: "Helpline with Area Manager Support",
-                desc: "Direct support and guidance from your dedicated Area Manager.",
-              },
-              {
-                icon: <Smartphone className="h-12 w-12 text-green-400 mb-4" />,
-                title: "Mobile App for Listing Products",
-                desc: "Easily list and manage your produce directly from your smartphone.",
-              },
-              {
-                icon: <CheckCircle className="h-12 w-12 text-green-400 mb-4" />,
-                title: "And Many More Benefits!",
-                desc: "Join our growing community and discover all the advantages of NayaVayapar.",
-              },
-            ].map((item, i) => (
+      {/* WHY JOIN */}
+      <section className="py-20 px-6">
+        <h2 className="text-4xl font-extrabold tracking-tight text-center mb-16">
+          Why Join <span className="text-green-500">NayaVayapar</span>?
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+          {[
+            {
+              icon: Scale,
+              title: "Fair & Transparent Pricing",
+              desc: "Ensure you get the best value for your hard work with clear and honest pricing.",
+            },
+            {
+              icon: Package,
+              title: "Assured Buyback of Makhana",
+              desc: "Guaranteed purchase of your Makhana produce, reducing market uncertainty.",
+            },
+            {
+              icon: GraduationCap,
+              title: "Training on Sorting, Grading & Packaging",
+              desc: "Enhance your product quality and market appeal with expert training.",
+            },
+            {
+              icon: MessageCircle,
+              title: "Helpline with Area Manager Support",
+              desc: "Direct support and guidance from your dedicated Area Manager.",
+            },
+            {
+              icon: Smartphone,
+              title: "Mobile App for Listing Products",
+              desc: "Easily list and manage your produce directly from your smartphone.",
+            },
+            {
+              icon: CheckCircle,
+              title: "And Many More Benefits!",
+              desc: "Join our growing community and discover all the advantages of NayaVayapar.",
+            },
+          ].map((item, i) => {
+            const Icon = item.icon;
+            return (
               <div
                 key={i}
-                className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border-t-2 border-green-500 p-6 text-center flex flex-col items-center"
+                className="group bg-white rounded-2xl p-10 shadow-xl 
+                hover:bg-green-500 hover:shadow-[0_20px_50px_rgba(34,197,94,0.4)] hover:-translate-y-3
+                transition-all duration-300 text-center"
               >
-                {item.icon}
-                <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
-                <p className="">{item.desc}</p>
+                <div className="flex justify-center mb-6">
+                  <Icon className="h-10 w-10 text-green-500 group-hover:text-white transition-colors" />
+                </div>
+
+                <h3 className="text-xl font-bold text-green-600 mb-4 group-hover:text-white transition-colors">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-600 italic leading-relaxed group-hover:text-white/90 transition-colors">
+                  {item.desc}
+                </p>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* What You Need Section */}
-      <section className="py-16 md:py-24 bg-gray-100 w-full">
-        <div className="w-full px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            What You Need to Start:
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white shadow-md rounded-lg border-l-4 border-green-500 p-6 flex items-start gap-4">
-              <Scan className="h-8 w-8 text-green-600 shrink-0 mt-1" />
-              <div>
-                <h3 className="font-semibold text-lg mb-1">Aadhaar (for verification)</h3>
-                <p className="text-sm">Your unique identification for secure onboarding.</p>
+      {/* WHAT YOU NEED */}
+      <section className="py-20 px-6">
+        <h2 className="text-4xl font-extrabold tracking-tight text-center mb-16">
+          What You Need to <span className="text-green-500">Start</span>
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+
+          {[{
+            icon: Scan,
+            title: "Aadhaar (for verification)",
+            desc: "Your unique identification for secure onboarding."
+          },{
+            icon: Leaf,
+            title: "Sample of your produce (for quality tagging)",
+            desc: "To ensure quality standards and proper categorization."
+          },{
+            icon: ClipboardList,
+            title: "Basic details (name, village, contact)",
+            desc: "Essential information to get you started quickly."
+          }].map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={i}
+                className="group bg-white rounded-2xl p-10 shadow-xl 
+                hover:bg-green-500 hover:shadow-[0_20px_50px_rgba(34,197,94,0.4)] hover:-translate-y-3
+                transition-all duration-300"
+              >
+                <Icon className="h-10 w-10 text-green-500 mb-6 group-hover:text-white transition-colors" />
+
+                <h3 className="text-xl font-bold text-green-600 mb-4 group-hover:text-white transition-colors">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-600 italic leading-relaxed group-hover:text-white/90 transition-colors">
+                  {item.desc}
+                </p>
               </div>
-            </div>
-            <div className="bg-white shadow-md rounded-lg border-l-4 border-green-500  p-6 flex items-start gap-4">
-              <Leaf className="h-8 w-8 text-green-600 shrink-0 mt-1" />
-              <div>
-                <h3 className="font-semibold text-lg mb-1">Sample of your produce (for quality tagging)</h3>
-                <p className=" text-sm">To ensure quality standards and proper categorization.</p>
-              </div>
-            </div>
-            <div className="bg-white shadow-md rounded-lg border-l-4 border-green-500  p-6 flex items-start gap-4">
-              <ClipboardList className="h-8 w-8 text-green-600 shrink-0 mt-1" />
-              <div>
-                <h3 className="font-semibold text-lg mb-1">Basic details (name, village, contact)</h3>
-                <p className="text-sm">Essential information to get you started quickly.</p>
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-12">
-            <p className="text-gray-600 text-base italic bg-white p-4 rounded-lg shadow-sm inline-block">
-              <span className="font-semibold text-green-700">Note:</span> Bank details are not required during
-              onboarding — we work on trust-first model.
-            </p>
-          </div>
+            );
+          })}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-400 font-medium">
+            <span className="text-green-400 font-semibold">Note:</span> Bank details are not required during onboarding — we work on trust-first model.
+          </p>
         </div>
       </section>
 
-      <ManagerSection/>
+      <ManagerSection />
 
-      {/* CTA Buttons */}
-      <section className="py-16 md:py-24 w-full">
-        <div className="w-full px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Ready to Grow?</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link
-              to="/register-farmer"
-              className="flex items-center justify-center gap-2 h-14 text-lg bg-green-600 hover:bg-green-700 text-white shadow-md rounded-md px-6 transition"
-            >
-              Join as Farmer <ArrowRight className="h-5 w-5" />
-            </Link>
-            <Link
-              to="/download-app"
-              className="flex items-center justify-center gap-2 h-14 text-lg border border-green-600 text-green-700 hover:bg-green-50 rounded-md px-6 transition"
-            >
-              Download Naya Bypar App <Smartphone className="h-5 w-5" />
-            </Link>
-            <Link
-              to="/farmer-rights"
-              className="flex items-center justify-center gap-2 h-14 text-lg text-gray-700 hover:bg-gray-100 rounded-md px-6 transition"
-            >
-              Know Your Rights <ClipboardList className="h-5 w-5" />
-            </Link>
-          </div>
+      {/* CTA */}
+      <section className="py-20 px-6 text-center">
+        <h2 className="text-4xl font-extrabold tracking-tight mb-12">
+          Ready to <span className="text-green-400">Grow</span>?
+        </h2>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <Link
+            to="/register-farmer"
+            className="flex items-center justify-center gap-2 h-14 text-lg
+            bg-green-500 text-black font-semibold
+            rounded-xl hover:shadow-[0_0_30px_rgba(34,197,94,1)]
+            transition"
+          >
+            Join as Farmer <ArrowRight className="h-5 w-5" />
+          </Link>
+
+          <Link
+            to="/download-app"
+            className="flex items-center justify-center gap-2 h-14 text-lg
+            border border-green-400 text-green-400
+            rounded-xl hover:bg-green-500 hover:text-black transition"
+          >
+            Download Naya Bypar App <Smartphone className="h-5 w-5" />
+          </Link>
+
+          <Link
+            to="/farmer-rights"
+            className="flex items-center justify-center gap-2 h-14 text-lg
+            border border-white/20 text-gray-300
+            rounded-xl hover:border-green-400 hover:text-green-400 transition"
+          >
+            Know Your Rights <ClipboardList className="h-5 w-5" />
+          </Link>
         </div>
       </section>
+
     </div>
   );
 }

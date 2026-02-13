@@ -1,94 +1,108 @@
-import { Briefcase, Phone, MessageSquare, CheckCircle } from "lucide-react";
+import { Phone, MessageSquare, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import NyaImage from "../assets/Nya.png"; // Aapka image path
+import NyaImage from "../assets/Nya.png";
 
 export default function ManagerSection() {
   return (
-    <section className="h-screen text-balck overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 h-full flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
-        
-        {/* LEFT SIDE: Manager Card */}
-        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
-          <motion.h2 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight"
-          >
-            Meet Your <br />
-            <span className="text-green-300 text-3xl md:text-4xl tracking-wide">Area Manager</span>
-          </motion.h2>
+    <section className="text-white py-28">
+      <div className="max-w-7xl mx-auto px-6">
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ y: -10 }}
-            className=" border border-white/20 p-6 md:p-8  shadow-2xl w-full max-w-md relative group"
-          >
-            {/* Verified Badge */}
-            <div className="absolute top-5 right-5 bg-white/20 px-3 py-1 rounded-full flex items-center gap-1.5 border border-white/30">
-              <CheckCircle className="h-4 w-4 text-green-300" />
-              <span className="text-[10px] font-bold uppercase tracking-wider">Verified</span>
-            </div>
-
-            <div className="flex flex-col items-center lg:items-start">
-              {/* Icon Circle */}
-             
-
-              <h3 className="text-3xl font-bold mb-1 tracking-tight">Rahul Kumar</h3>
-              <p className="font-medium mb-6">Area Business Manager</p>
-
-              {/* Number Box */}
-              <div className="w-full bg-green-400 rounded-2xl p-4 mb-8 border border-white/10  transition-colors">
-                <p className="text-xs  uppercase  mb-1 tracking-widest">Call Directly</p>
-                <a href="tel:8116146987" className="text-xl md:text-2xl  text-white">
-                  8116146987
-                </a>
-              </div>
-
-              <p className="text-xl italic  mb-8 font-medium">
-                "आपको हर कदम पर साथ मिलेगा"
-              </p>
-
-              <div className="flex gap-4 w-full">
-  <Link
-    to="tel:8116146987"
-    className="flex-1 bg-white text-green-800 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-green-50 transition-all active:scale-95 shadow-xl"
-  >
-    <Phone className="h-5 w-5" /> Call
-  </Link>
-
-  <Link
-    to="https://wa.me/918116146987"
-    target="_blank"
-    className="flex-1 bg-green-600 border border-green-500 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-green-500 transition-all active:scale-95 shadow-xl"
-  >
-    <MessageSquare className="h-5 w-5" /> WhatsApp
-  </Link>
-</div>
-            </div>
-          </motion.div>
+        {/* CENTER HEADING */}
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+            Meet Your{" "}
+            <span className="text-green-500 italic">Area Manager</span>
+          </h2>
         </div>
 
-        {/* RIGHT SIDE: Image */}
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          className="w-full lg:w-1/2 flex justify-center"
-        >
-          <div className="relative group">
-            {/* Decorative background glow */}
-            <div className="absolute -inset-4   transition-opacity" />
-            
-            <img 
-              src={NyaImage} 
-              alt="NayaVayapar Farm Support" 
-              className="relative z-10 w-full max-w-sm md:max-w-md h-auto  object-cover transform transition-transform group-hover:scale-[1.02] duration-500"
-            />
-          </div>
-        </motion.div>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
+          {/* LEFT SIDE - CARD */}
+          <motion.div
+            whileHover={{ y: -8 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white text-black rounded-xl p-10 shadow-2xl relative"
+          >
+
+            {/* Verified */}
+            <div className="absolute top-6 right-6 bg-green-500 text-white px-4 py-1.5 rounded-full flex items-center gap-2 text-sm font-semibold shadow-md">
+              <CheckCircle className="h-4 w-4" />
+              Verified
+            </div>
+
+            <h3 className="text-3xl font-bold tracking-tight mb-1">
+              Rahul Kumar
+            </h3>
+
+            <p className="text-green-600 font-medium mb-8">
+              Area Business Manager
+            </p>
+
+            {/* Call Box */}
+            <div className="bg-green-500 text-white rounded-xl p-2 mb-4 shadow-lg">
+              <p className="text-xs uppercase tracking-widest mb-1 opacity-80">
+                Call Directly
+              </p>
+
+              <Link
+                to="tel:8116146987"
+                className="text-2xl font-bold"
+              >
+                8116146987
+              </Link>
+            </div>
+
+            <p className="italic text-gray-600 mb-8 text-lg">
+              "आपको हर कदम पर साथ मिलेगा"
+            </p>
+
+            {/* Buttons */}
+            <div className="flex gap-4">
+
+              <Link
+                to="tel:8116146987"
+                className="flex-1 bg-green-500 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-green-800 transition-all duration-300"
+              >
+                <Phone className="h-5 w-5" />
+                Call
+              </Link>
+
+              <Link
+                to="https://wa.me/918116146987"
+                target="_blank"
+                className="flex-1 bg-green-600 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-green-500 transition-all duration-300"
+              >
+                <MessageSquare className="h-5 w-5" />
+                WhatsApp
+              </Link>
+
+            </div>
+          </motion.div>
+
+          {/* RIGHT SIDE IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center"
+          >
+            <div className="relative">
+
+              {/* Glow Effect */}
+              <div className="absolute -inset-6 bg-green-500/10 blur-3xl rounded-full"></div>
+
+              <img
+                src={NyaImage}
+                alt="Manager"
+                className="relative z-10 w-full max-w-md lg:max-w-lg object-contain"
+              />
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
 }
+
